@@ -1,0 +1,16 @@
+import numpy as np
+import pandas as pd
+
+from matplotlib import pyplot as plt
+
+import seaborn as sns
+
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import confusion_matrix
+
+from joblib import dump,load
+
+cols=['sepal length','sepal width','petal length','petal width','class']
+df=pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data',names=cols)
+df.head()
